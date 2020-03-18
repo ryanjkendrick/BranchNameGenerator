@@ -2,7 +2,7 @@
 	"name": "branchnamegenerator",
 	"displayName": "BranchNameGenerator",
 	"description": "Extension for generating branch names.",
-	"version": "0.0.3",
+	"version": "1.0.4",
 	"publisher": "RKendrick",
 	"engines": {
 		"vscode": "^1.43.0"

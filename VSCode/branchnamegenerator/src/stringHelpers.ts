@@ -47,3 +47,12 @@ export function timeString() :  string {
     return date.toTimeString();
 }
 
+export function convertSpaces(value: string | undefined) {
+    if (value === undefined || value === null) {
+        return null;
+    }
+
+    let re = /\ /gi;
+
+    return value.replace(re, "-");
+}

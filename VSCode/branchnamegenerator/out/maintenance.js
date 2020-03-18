@@ -18,7 +18,7 @@ function maintenance() {
         const ticketId = yield vscode_1.window.showInputBox({
             placeHolder: 'Ticket ID: e.g. jira-123',
             validateInput: text => {
-                return stringHelpers.validateInput(text) ? null : 'Not valid branch name syntax';
+                return text !== "" && stringHelpers.validateInput(text) ? null : 'Not valid branch name syntax';
             }
         });
         const description = yield vscode_1.window.showInputBox({
@@ -28,9 +28,9 @@ function maintenance() {
             }
         });
         if (description !== null && description !== undefined && description !== "") {
-            name += description + "-";
+            name += stringHelpers.convertSpaces(description) + "-";
         }
-        branchName.showBranchName(name + ticketId);
+        branchName.showBranchName(name + stringHelpers.convertSpaces(ticketId));
     });
 }
 exports.maintenance = maintenance;

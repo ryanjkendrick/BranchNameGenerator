@@ -5,11 +5,11 @@ import * as branchName from './branchName';
 export async function discovery() {
     var name = "discovery/" + stringHelpers.dateString() + "-";
     const description = await window.showInputBox({
-		placeHolder: 'Description (optional): e.g. test-description',
+		placeHolder: 'Description: e.g. test-description',
 		validateInput: text => {
-			return stringHelpers.validateInput(text) ? null : 'Not valid branch name syntax';
+			return text !== "" && stringHelpers.validateInput(text) ? null : 'Not valid branch name syntax';
 		}
     });
 
-    branchName.showBranchName(name + description);
+    branchName.showBranchName(name + stringHelpers.convertSpaces(description));
 }

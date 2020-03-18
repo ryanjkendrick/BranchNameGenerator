@@ -10,26 +10,24 @@ Create branch name, copy branch name.
 
 A computer.
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-
 ## Known Issues
 
 Releases keeps the multi-entry open.
 
 ## Release Notes
 
-Initial upload.
+You can now put spaces in your entries and the Generator will convert them to dashes for you
 
 ### 1.0.0
 
 Initial release of Branch Name Generator
+
+### 1.0.2
+
+Addition of 'discovery' branch
+
+### 1.0.4
+
+You can now put spaces in your entries and the Generator will convert them to dashes for you
 
 **Enjoy!**

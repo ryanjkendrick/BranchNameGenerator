@@ -16,12 +16,12 @@ function discovery() {
     return __awaiter(this, void 0, void 0, function* () {
         var name = "discovery/" + stringHelpers.dateString() + "-";
         const description = yield vscode_1.window.showInputBox({
-            placeHolder: 'Description (optional): e.g. test-description',
+            placeHolder: 'Description: e.g. test-description',
             validateInput: text => {
-                return stringHelpers.validateInput(text) ? null : 'Not valid branch name syntax';
+                return text !== "" && stringHelpers.validateInput(text) ? null : 'Not valid branch name syntax';
             }
         });
-        branchName.showBranchName(name + description);
+        branchName.showBranchName(name + stringHelpers.convertSpaces(description));
     });
 }
 exports.discovery = discovery;

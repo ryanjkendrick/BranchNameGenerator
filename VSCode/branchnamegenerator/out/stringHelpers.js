@@ -41,4 +41,12 @@ function timeString() {
     return date.toTimeString();
 }
 exports.timeString = timeString;
+function convertSpaces(value) {
+    if (value === undefined || value === null) {
+        return null;
+    }
+    let re = /\ /gi;
+    return value.replace(re, "-");
+}
+exports.convertSpaces = convertSpaces;
 //# sourceMappingURL=stringHelpers.js.map
