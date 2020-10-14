@@ -9,11 +9,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const vscode_1 = require("vscode");
 const stringHelpers = require("./stringHelpers");
 const branchName = require("./branchName");
 function releases() {
     return __awaiter(this, void 0, void 0, function* () {
         var name = "releases/" + stringHelpers.dateString() + "-" + stringHelpers.timeString();
+        const description = yield vscode_1.window.showInputBox({
+            placeHolder: 'Description (optional): e.g. test-description',
+            validateInput: text => {
+                return stringHelpers.validateInput(text) ? null : 'Not valid branch name syntax';
+            }
+        });
+        if (description !== null && description !== undefined && description !== "") {
+            name += "-" + stringHelpers.convertSpaces(description);
+        }
         branchName.showBranchName(name);
     });
 }

@@ -12,7 +12,7 @@ A computer.
 
 ## Known Issues
 
-Releases keeps the multi-entry open.
+_N/A_
 
 ## Release Notes
 
@@ -33,5 +33,9 @@ You can now put spaces in your entries and the Generator will convert them to da
 ### 1.0.5
 
 Addition of 'development' branch
+
+### 1.0.6
+
+Optional description added to 'releases'
 
 **Enjoy!**

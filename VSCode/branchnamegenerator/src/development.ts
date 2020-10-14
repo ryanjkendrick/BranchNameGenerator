@@ -12,9 +12,9 @@ export async function development() {
     });
     const description = await window.showInputBox({
 		placeHolder: 'Description (optional): e.g. test-description',
-		validateInput: text => {
-			return stringHelpers.validateInput(text) ? null : 'Not valid branch name syntax';
-		}
+			validateInput: text => {
+				return stringHelpers.validateInput(text) ? null : 'Not valid branch name syntax';
+			}
     });
     
     if (description !== null && description !== undefined && description !== "") {
