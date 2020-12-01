@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.convertSpaces = exports.timeString = exports.dateString = exports.validateInput = void 0;
 const illegalCharacters = [..."@!?#&|\\/^_$%*:"];
 Date.prototype.toDateString = function () {
     var mm = this.getMonth() + 1; // getMonth() is zero-based
@@ -46,7 +47,7 @@ function convertSpaces(value) {
         return null;
     }
     let re = /\ /gi;
-    return value.replace(re, "-");
+    return value.trim().replace(re, "-");
 }
 exports.convertSpaces = convertSpaces;
 //# sourceMappingURL=stringHelpers.js.map

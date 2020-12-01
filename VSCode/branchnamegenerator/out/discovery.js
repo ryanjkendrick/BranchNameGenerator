@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.discovery = void 0;
 const vscode_1 = require("vscode");
 const stringHelpers = require("./stringHelpers");
 const branchName = require("./branchName");
