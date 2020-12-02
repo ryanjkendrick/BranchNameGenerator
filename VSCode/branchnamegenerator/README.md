@@ -16,7 +16,7 @@ _N/A_
 
 ## Release Notes
 
-Addition of 'development' branch
+Branch name is copied to clipboard when creating a new branch. Will now ask if you would like to checkout the created branch.
 
 ### 1.0.0
 
@@ -37,5 +37,13 @@ Addition of 'development' branch
 ### 1.0.6
 
 Optional description added to 'releases'
+
+### 1.0.7
+
+Inputs are trimmed of whitespace before they are used. 'Create Branch' button has been added to make life simpler.
+
+### 1.0.8
+
+Branch name is copied to clipboard when creating a new branch. Will now ask if you would like to checkout the created branch.
 
 **Enjoy!**

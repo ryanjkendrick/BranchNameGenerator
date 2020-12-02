@@ -2,7 +2,7 @@
 	"name": "branchnamegenerator",
 	"displayName": "BranchNameGenerator",
 	"description": "Extension for generating branch names.",
-	"version": "1.0.6",
+	"version": "1.0.8",
 	"publisher": "RKendrick",
 	"engines": {
 		"vscode": "^1.43.0"
@@ -34,6 +34,9 @@
 		"pretest": "npm run compile && npm run lint",
 		"test": "node ./out/test/runTest.js"
 	},
+	"extensionDependencies": [
+		"vscode.git"
+	],
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.1",

@@ -54,5 +54,5 @@ export function convertSpaces(value: string | undefined) {
 
     let re = /\ /gi;
 
-    return value.replace(re, "-");
+    return value.trim().replace(re, "-");
 }
